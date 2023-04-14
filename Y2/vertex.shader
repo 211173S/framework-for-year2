@@ -1,12 +1,13 @@
 #version 330 core
 layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
-layout(location = 2) in vec2 aTexCoord;
-out vec3 ourColor;
+layout(location = 1) in vec2 aTexCoord;
 out vec2 texCoord;
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 void main()
 {
-   gl_Position = vec4(aPos, 1.0f);
-   ourColor = aColor;
-   texCoord = aTexCoord; // texCoord will output the value of aTexCoord inputted
+	// note that we read the multiplication from right to left
+   gl_Position = projection * view * model * vec4(aPos, 1.0f); // done for every vertex, calculates the final position of the vertex
+   texCoord = vec2(aTexCoord.x, aTexCoord.y); // texCoord will output the value of aTexCoord inputted
 };
