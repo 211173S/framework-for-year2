@@ -12,7 +12,7 @@
 
 class Shader
 {
-public: 
+public:
 	// program id
 	unsigned int ID;
 
@@ -22,8 +22,9 @@ public:
 	void employ();
 	// utility uniform function
 	void setBool(const std::string& name, bool value) const; // doesnt change member functions
-	void setInt(const std::string& name,  int value	) const;
+	void setInt(const std::string& name, int value) const;
 	void setFloat(const std::string& name, float value) const;
 	void setMat4(const std::string& name, const glm::mat4& mat) const;
+	void setVec3(const std::string& name, const glm::vec3& data) const;
 };
 

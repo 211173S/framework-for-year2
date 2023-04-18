@@ -27,9 +27,6 @@
     <ClCompile Include="image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fpsCam.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -38,15 +35,24 @@
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fpsCam.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="vertex.shader">
       <Filter>Source Files</Filter>
     </None>
     <None Include="fragment.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lightingVertex.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lightingFragment.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lightSourceVertex.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lightSourceFragment.shader">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
